@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    transition: 0.3s;
+}
+header.scroll{
+    background-color: white;
+}
+header .wrapper.scroll{
+    background-color: white;
+}
+header .wrapper{
+    width: 70%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    justify-content: space-between;
+}
+.logo img{
+    width: 120px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+nav ul li{
+    margin: 0 13px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #4F5665;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    color: #F53838;
+}
+.register a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+.register{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sign-in{
+    color: #0B132A;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+} 
+.sign-in:hover{
+    color: #F53855;
+}
+.sign-up{
+    color: #F53855;
+    padding: 7px 14px;
+    border: 1px solid #F53855;
+    border-radius: 18px;
+    transition: 0.3s;
+    background: none;
+    cursor: pointer;
+}
+.sign-up:hover{
+    background-color: #F53838;
+    color: white;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger span{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+@media screen and (max-width:1024px) {
+    header .wrapper{
+        width: 75%;
+    }
+    .logo img{
+        width: 100px;
+        padding-top: 10px;
+    }
+    nav ul li a{
+        font-size: 12px;
+        margin-right: -10px;
+    }
+    .register a{
+        font-size: 12px;
+    }
+    .hero-btn a{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:881px){
+    header .wrapper{
+        width: 80%;
+    }
+}
+@media screen and (max-width:768px){
+    nav ul{
+        position: fixed;
+        width: 100%;
+        flex-direction: column;
+        top: 44px;
+        text-align: center;
+        left: -100%;
+        transition: 0.3s;
+        background-color: white;
+        margin: 0;
+    }
+    nav ul.active{
+        left: 0%;
+        margin-top: 4px;
+    }
+    nav ul li{
+        margin: 17px 0;
+    } 
+    nav ul li a{
+        padding: 17px 40px;
+    }
+    .burger{
+        display: block;
+    }
+} 
+@media screen and (max-width:678px) {
+    header .wrapper{
+        width: 85%;
+    }
+    .logo img{
+        width: 120px;
+    }
+}
+@media screen and (max-width:375px) {
+    header{
+        padding: 0;
+    }
+    header .wrapper{
+        width: 90%;
+
+    }
+    .logo img{
+        width: 90px;
+    }
+}   
